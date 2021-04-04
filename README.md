@@ -39,12 +39,22 @@
     - To remove a saved cover, simply double-click the miniature cover image
     - User may navigate back to the home page or to the form page from this section
 
-## Illustrations
+## Image of Main View
 
-<img width=“480” alt=“Screen Shot <img width=“480” alt=“Screen Shot 2021-04-04 at 4 09 37 PM” src=“https://user-images.githubusercontent.com/76264735/113523124-2cbfcb80-9563-11eb-878d-cc8d9e060b39.png”>
+<img width="480" alt="Screen Shot 2021-04-04 at 4 09 37 PM" src="https://user-images.githubusercontent.com/76264735/113523124-2cbfcb80-9563-11eb-878d-cc8d9e060b39.png">
+
+## Image of Form View
+
+<img width="480" alt="Screen Shot 2021-04-04 at 4 15 47 PM" src="https://user-images.githubusercontent.com/76264735/113523060-dce10480-9562-11eb-8cbe-c2aeaa78c1a0.png">
+
+## Image of User Created Cover
+
+<img width="480" alt="Screen Shot 2021-04-04 at 4 16 08 PM" src="https://user-images.githubusercontent.com/76264735/113523079-f2eec500-9562-11eb-92d2-3f13e4c6684a.png">
+
 
 ## Deployed Page
-Visit our live RomCom page :
+
+Visit our live RomCom page: https://lschnell8.github.io/romcom/
 
 ## Set Up
 
