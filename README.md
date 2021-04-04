@@ -7,7 +7,11 @@
   - Sources
 
 ## Introduction
-    This project is a fun way to generate a good laugh. Generate random book covers using the assets provided or create your own instance of a RomCom cover. Save your favorite book covers and view them in the saved covers area by clicking the *View Saved Covers* button. Revisit anytime you need a good pick-me-up or to share a laugh with your friends.
+    This project is a fun way to generate a good laugh. Generate random book  
+    covers using the assets provided or create your own instance of a RomCom  
+    cover. Save your favorite book covers and view them in the saved covers area  
+    by clicking the *View Saved Covers* button. Revisit anytime you need a good  
+    pick-me-up or to share a laugh with your friends.
 
 ## Technologies
   - Javascript
@@ -24,20 +28,27 @@
     - Each unique cover will only be saved once
 
     **Form Page**
-    - Click the *Make Your Own Cover* button to access the form to create a cover
-    - Form input is required in all fields in order to activate the *Make My Book* button
-    - The *Cover* field takes an image address in order to display a cover image, but will accept any text. If the input is not a valid image address, a broken link will be displayed in place of the cover
+    - Click the *Make Your Own Cover* button to access the form to create a  
+    cover
+    - Form input is required in all fields in order to activate the  
+    *Make My Book* button
+    - The *Cover* field takes an image address in order to display a cover  
+    image, but will accept any text. If the input is not a valid image address,  
+    a broken link will be displayed in place of the cover
     - All other input fields will accept and utilize any text
-    - Clicking the *Home* button from the form page will take the user back to the main page view
+    - Clicking the *Home* button from the form page will take the user back to  
+    the main page view
 
     **Display Created Book**
-    - After clicking *Make My Book* on the form page, user is taken to the main page where their personalized book cover is displayed
+    - After clicking *Make My Book* on the form page, user is taken to the main  
+    page where their personalized book cover is displayed
     - User may save their unique cover by clicking *Save Cover*
 
     **View Saved Covers**
     - Each saved cover will be displayed in miniature
     - To remove a saved cover, simply double-click the miniature cover image
-    - User may navigate back to the home page or to the form page from this section
+    - User may navigate back to the home page or to the form page from this  
+    section
 
 ## Image of Main View
 
