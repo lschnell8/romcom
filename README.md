@@ -20,14 +20,16 @@
 
 ## Features
 
-    **Main Page**
+    Main Page:
+
     - When RomCom loads you will see a randomly generated book cover
     - Click the *Show New Random Cover* button to generate a new random cover
     - User can save the displayed cover by clicking the *Save Cover* button
     - View any saved covers by clicking the *View Saved Covers* button
     - Each unique cover will only be saved once
 
-    **Form Page**
+    Form Page:
+
     - Click the *Make Your Own Cover* button to access the form to create a  
     cover
     - Form input is required in all fields in order to activate the  
@@ -39,12 +41,14 @@
     - Clicking the *Home* button from the form page will take the user back to  
     the main page view
 
-    **Display Created Book**
+    Display Created Book:
+
     - After clicking *Make My Book* on the form page, user is taken to the main  
     page where their personalized book cover is displayed
     - User may save their unique cover by clicking *Save Cover*
 
-    **View Saved Covers**
+    View Saved Covers:
+
     - Each saved cover will be displayed in miniature
     - To remove a saved cover, simply double-click the miniature cover image
     - User may navigate back to the home page or to the form page from this  
