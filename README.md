@@ -31,9 +31,9 @@
     - Click the *Make Your Own Cover* button to access the form to create a  
     cover
     - Form input is required in all fields in order to activate the  
-    *Make My Book* button
+    *Make My Book* button's functionality
     - The *Cover* field takes an image address in order to display a cover  
-    image, but will accept any text. If the input is not a valid image address,  
+    image, but will accept any text. If input is not a valid image address,  
     a broken link will be displayed in place of the cover
     - All other input fields will accept and utilize any text
     - Clicking the *Home* button from the form page will take the user back to  
@@ -69,6 +69,13 @@
 ## Deployed Page
 
 Visit our live RomCom page: https://lschnell8.github.io/romcom/
+
+## Possible Future Extensions
+
+  - Create error messaging that will display under a form field needing input  
+  if the field is left empty
+  - Fully disable the *Make My Book* button so it does not highlight until  
+  it's functional with populated form fields to submit
 
 ## Set Up
 
