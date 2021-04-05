@@ -62,6 +62,9 @@
 
 <img width="480" alt="Screen Shot 2021-04-04 at 4 16 08 PM" src="https://user-images.githubusercontent.com/76264735/113523079-f2eec500-9562-11eb-92d2-3f13e4c6684a.png">
 
+## Image of View Saved Covers
+
+<img width="480" alt="Screen Shot 2021-04-04 at 4 11 55 PM" src="https://user-images.githubusercontent.com/76264735/113523215-afe12180-9563-11eb-96d3-9c88008bfb3a.png">
 
 ## Deployed Page
 
@@ -75,8 +78,8 @@ Visit our live RomCom page: https://lschnell8.github.io/romcom/
 
 
 ## Sources
-  - MDN
-  - W3Schools
+  - [MDN](http://developer.mozilla.org/en-US/)
+  - [W3Schools](https://www.w3schools.com/)
 
 ## RomCom Project Specs
   - The project spec & rubric can be found [here](https://frontend.turing.io/projects/module-1/romcom-pair.html)
