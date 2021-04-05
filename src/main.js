@@ -102,7 +102,7 @@ function displaySavedCovers(savedCovers) {
 
 function clearSavedAreaInnerHTML() {
   savedCoversArea.innerHTML = '';
-}
+};
 
 function popDescriptors() {
   tagline2.innerText = descriptors.pop();
@@ -118,9 +118,8 @@ function saveUserValuesToRespectiveArrays() {
 function loadCoverElements() {
   coverImage.src = covers.pop();
   coverTitle.innerText = titles.pop();
-
 };
-// HIDE PAGE AREA FUNCTIONS TO REFACTOR
+
 function hideHomePage() {
   homeAddHidden();
   formRemoveHidden();
