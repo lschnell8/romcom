@@ -105,7 +105,7 @@ var descriptors = [
   "fervor",
   "rage",
   "spirit",
-  "desparity",
+  "disparity",
   "zeal",
   "ecstasy",
   "ire",
