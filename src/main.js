@@ -4,17 +4,17 @@ var coverTitle = document.querySelector('.cover-title');
 var tagline1 = document.querySelector('.tagline-1');
 var tagline2 = document.querySelector('.tagline-2');
 var userCover = document.getElementById('cover');
-var userTitle = document.getElementById('title');
 var userDesc1 = document.getElementById('descriptor1');
 var userDesc2 = document.getElementById('descriptor2');
+var userTitle = document.getElementById('title');
 
 //BUTTON VARS
-var showRandomCoverBtn = document.querySelector('.random-cover-button');
-var makeYourOwnCoverBtn = document.querySelector('.make-new-button');
-var viewSavedBtn = document.querySelector('.view-saved-button');
-var saveCoverBtn = document.querySelector('.save-cover-button');
 var createNewBookBtn = document.querySelector('.create-new-book-button');
 var homeBtn = document.querySelector('.home-button');
+var makeYourOwnCoverBtn = document.querySelector('.make-new-button');
+var saveCoverBtn = document.querySelector('.save-cover-button');
+var showRandomCoverBtn = document.querySelector('.random-cover-button');
+var viewSavedBtn = document.querySelector('.view-saved-button');
 
 //PAGE AREA VARS
 var formArea = document.querySelector('.form-view');
@@ -29,13 +29,13 @@ var currentCover;
 
 // Add your event listeners here 👇
 window.addEventListener('load', randomCover);
-showRandomCoverBtn.addEventListener('click', randomCover);
-makeYourOwnCoverBtn.addEventListener('click', hideHomePage);
-viewSavedBtn.addEventListener('click', showSavedArea);
-homeBtn.addEventListener('click', exposeHomePage);
 createNewBookBtn.addEventListener('click', createNewBook);
+homeBtn.addEventListener('click', exposeHomePage);
+makeYourOwnCoverBtn.addEventListener('click', hideHomePage);
 saveCoverBtn.addEventListener('click', addCoverToSaved);
 savedCoversArea.addEventListener('dblclick', deleteSavedCover);
+showRandomCoverBtn.addEventListener('click', randomCover);
+viewSavedBtn.addEventListener('click', showSavedArea);
 
 // Create your event handlers and other functions here 👇
 // We've provided one function to get you started
@@ -52,42 +52,19 @@ function randomCover(event) {
   currentCover = new Cover(coverImage.src, coverTitle.innerText, tagline1.innerText, tagline2.innerText);
 };
 
-function disableMakeMyBookBtn() {
-  createNewBookBtn.disabled = true;
-};
-
-function enableMakeMyBookBtn() {
-  createNewBookBtn.disable = false;
-};
-
-function popDescriptor1() {
-  tagline1.innerText = descriptors.pop();
-}
-
-function popDescriptor2() {
-  tagline2.innerText = descriptors.pop();
-}
-
-function saveUserValuesToRespectiveArrays() {
-  covers.push(userCover.value);
-  titles.push(userTitle.value);
-  descriptors.push(userDesc1.value, userDesc2.value);
-}
 
 function createNewBook(event) {
   event.preventDefault();
   if (userCover.value !== '' && userTitle.value !== '' && userDesc1.value !== '' && userDesc2.value !== '') {
-    saveUserValuesToRespectiveArrays();
     currentCover = new Cover(userCover.value, userTitle.value, userDesc1.value, userDesc2.value);
+    saveUserValuesToRespectiveArrays();
     formAddHidden();
     homeRemoveHidden();
     saveCoverBtnRemoveHidden();
-    coverImage.src = covers.pop();
-    coverTitle.innerText = titles.pop();
-    popDescriptor2();
-    popDescriptor1();
+    loadCoverElements();
+    popDescriptors();
   }
-}
+};
 
 function addCoverToSaved() {
   if(!savedCovers.includes(currentCover)) {
@@ -100,14 +77,14 @@ function deleteSavedCover() {
   for (var i = 0; i < savedCovers.length; i++) {
     if (savedCovers[i].id === Number(coverToTrash.id)) {
       savedCovers.splice([i], 1);
-      savedCoversArea.innerHTML = '';
+      clearSavedAreaInnerHTML();
       displaySavedCovers(savedCovers);
     }
   }
 };
 
 function displaySavedCovers(savedCovers) {
-  savedCoversArea.innerHTML = '';
+  clearSavedAreaInnerHTML();
   for (var i = 0; i < savedCovers.length; i++) {
     var savedMiniCover =
       `
@@ -123,7 +100,55 @@ function displaySavedCovers(savedCovers) {
    }
 };
 
+function clearSavedAreaInnerHTML() {
+  savedCoversArea.innerHTML = '';
+}
+
+function popDescriptors() {
+  tagline2.innerText = descriptors.pop();
+  tagline1.innerText = descriptors.pop();
+};
+
+function saveUserValuesToRespectiveArrays() {
+  covers.push(userCover.value);
+  titles.push(userTitle.value);
+  descriptors.push(userDesc1.value, userDesc2.value);
+};
+
+function loadCoverElements() {
+  coverImage.src = covers.pop();
+  coverTitle.innerText = titles.pop();
+
+};
 // HIDE PAGE AREA FUNCTIONS TO REFACTOR
+function hideHomePage() {
+  homeAddHidden();
+  formRemoveHidden();
+  savedAreaAddHidden();
+  homeBtnRemoveHidden();
+  saveCoverBtnAddHidden();
+  showRandomCoverBtnAddHidden();
+};
+
+function showSavedArea() {
+  addMiniClassToSavedCoversArea();
+  homeAddHidden();
+  savedAreaRemoveHidden();
+  formAddHidden();
+  showRandomCoverBtnAddHidden();
+  saveCoverBtnAddHidden();
+  homeBtnRemoveHidden();
+  displaySavedCovers(savedCovers);
+};
+
+function exposeHomePage() {
+  homeRemoveHidden();
+  formAddHidden();
+  savedAreaAddHidden();
+  saveCoverBtnRemoveHidden();
+  showRandomCoverBtnRemoveHidden();
+  homeBtnAddHidden();
+};
 
 function homeAddHidden() {
   homePageArea.classList.add('hidden');
@@ -175,33 +200,4 @@ function homeBtnRemoveHidden() {
 
 function addMiniClassToSavedCoversArea() {
   savedCoversArea.classList.add('mini-cover');
-};
-
-function hideHomePage() {
-  homeAddHidden();
-  formRemoveHidden();
-  savedAreaAddHidden();
-  homeBtnRemoveHidden();
-  saveCoverBtnAddHidden();
-  showRandomCoverBtnAddHidden();
-};
-
-function showSavedArea() {
-  addMiniClassToSavedCoversArea();
-  homeAddHidden();
-  savedAreaRemoveHidden();
-  formAddHidden();
-  showRandomCoverBtnAddHidden();
-  saveCoverBtnAddHidden();
-  homeBtnRemoveHidden();
-  displaySavedCovers(savedCovers);
-};
-
-function exposeHomePage() {
-  homeRemoveHidden();
-  formAddHidden();
-  savedAreaAddHidden();
-  saveCoverBtnRemoveHidden();
-  showRandomCoverBtnRemoveHidden();
-  homeBtnAddHidden();
 };
