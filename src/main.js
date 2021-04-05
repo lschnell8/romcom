@@ -63,8 +63,16 @@ function createNewBook(event) {
     saveCoverBtnRemoveHidden();
     loadCoverElements();
     popDescriptors();
+    clearFormFields();
   }
 };
+
+function clearFormFields() {
+  userCover.value = '';
+  userTitle.value = '';
+  userDesc1.value = '';
+  userDesc2.value = '';
+}
 
 function addCoverToSaved() {
   if(!savedCovers.includes(currentCover)) {
